@@ -1,0 +1,613 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  background-color: #0d021e;
+  background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23073952' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*estilo para los elementos <img> utilizados para la sección frontend y backend*/
+img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px 8px 5px 5px;
+}
+
+hr {
+  border-bottom: 1.5px solid aqua;
+}
+
+.container {
+  position: relative;
+  width: 96%;
+  top: 60px;
+  margin: auto;
+}
+
+.boton {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  background: #142758;
+  font-size: 15px;
+  margin: 10px 0;
+  /* border: 1px solid #fff; */
+  border-radius: 8px;
+}
+
+.boton-menu {
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  left: 25px;
+  z-index: 2;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.column {
+  background-color: #50475e;
+  opacity: 0.8;
+  border-radius: 8px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--Navigation-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.container-nav-main {
+  width: 100%;
+}
+
+/*estilo para elemento <nav>*/
+.nav-main {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  background: #142758;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0;
+  /* border: 1.5px solid #fff; */
+  border-radius: 8px;
+  z-index: 1;
+}
+
+/*estilo para elemento <img> con clase nav-brand */
+.nav-brand {
+  width: 50px;
+  height: 40px;
+  margin-left: 5px;
+}
+
+/*este estilo indica que para el tamaño que no sea movil, estará oculto el elemento con clase .nav-brand-mobile, gracias al display: none*/
+.nav-brand-mobile {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  left: -50px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.nav-main ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-main ul li {
+  padding: 5px;
+}
+
+.nav-main ul.nav-menu li.more {
+  margin-left: 5px;
+}
+
+.nav-main ul li a {
+  padding: 1px;
+}
+
+.nav-main ul li a:hover {
+  border-bottom: 2px solid aqua;
+}
+
+.nav-main ul.nav-menu {
+  flex: 1;
+  margin-left: -40px;
+}
+
+/*estilo para el icono de busqueda (seccion NAV)*/
+.nav-main .icon-search {
+  display: inline-block;
+  margin: 0 20px 0 50px;
+  font-size: 17px;
+}
+
+.nav-main .icon-search a:hover {
+  color: aqua;
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<--WEB DEVELOPMENT-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.web-dev {
+  width: 100%;
+  height: 550px;
+  background: url("/assets/img2/prog-medium.jpg") no-repeat center center/cover;
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+  margin-top: 8px;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px dotted black;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background:#202e55;
+  color: aqua;
+  opacity: 0.9;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<--FRONT-END-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.section-frontend {
+  width: 100%;
+  height: 380px;
+  background: url("/assets/img2/frontend-logo.png") no-repeat right;
+  background-blend-mode: exclusion;
+  background-size: 70% 100%;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+
+.section-frontend .content {
+  width: 60%;
+  padding: 20px 20px;
+  font-weight: bold;
+}
+
+.section-frontend p,
+.section-frontend h2 {
+  font-size: 18px;
+  margin: 20px 0;
+  color: chartreuse;
+}
+
+.section-frontend h2 {
+  font-size: 26px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--FRONT-END ELEMENTS-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.frontend-elements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  margin: 10px 0;
+}
+
+.column-25 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.frontend-elements h3 {
+  font-size: 24px;
+  margin: 5px 8px;
+  font-weight: bold;
+  color: chartreuse;
+}
+
+.frontend-elements p {
+  font-size: 15px;
+  margin: 5px 8px;
+}
+
+.frontend-elements a {
+  margin: 5px 0 15px 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.frontend-elements a:hover {
+  color: chartreuse;
+  border-bottom: 1.7px solid #fff;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<--BACK-END-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.section-backend {
+  width: 100%;
+  height: 380px;
+  background: url("/assets/img2/back-medium.jpg") no-repeat center;
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+  border-radius: 3px;
+}
+
+.section-backend .content {
+  width: 60%;
+  padding: 20px 20px;
+  color: yellow;
+  font-weight: bold;
+}
+
+.section-backend p,
+.section-backend h2 {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.section-backend h2 {
+  font-size: 26px;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--BACK-END ELEMENTS-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.backend-elements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin: 10px 0;
+}
+
+.column-33 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.backend-elements h3 {
+  font-size: 24px;
+  margin: 5px 8px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.backend-elements p {
+  font-size: 15px;
+  margin: 5px 8px;
+}
+
+.backend-elements a {
+  margin: 5px 0 15px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.backend-elements a:hover {
+  color: yellow;
+  border-bottom: 1.8px solid #fff;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<--BLOCK-FULLSTACK-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+.block-fullstack {
+  width: 100%;
+  height: 380px;
+  background: url("/assets/img2/fullstack3.png") no-repeat right;
+  background-blend-mode: exclusion;
+  background-size: 45% 100%;
+  border-radius: 3px;
+}
+
+.block-fullstack .content {
+  width: 60%;
+  padding: 20px 20px;
+  color: red;
+  font-weight: bold;
+}
+
+.block-fullstack p,
+.block-fullstack h2 {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.block-fullstack h2 {
+  font-size: 26px;
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--SOCIAL-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.social {
+  margin: 35px 35px 85px 35px;
+}
+
+.social h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: aqua;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a {
+  margin: 0 20px;
+}
+
+.links a i {
+  font-size: 30px;
+}
+
+.links a i:hover {
+  color: aqua;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--TEMAS-LINKS-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.temas-links {
+  background: #415151;
+  font-size: 13px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.temas-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.temas-container ul a.tema {
+  margin: 0 auto;
+  color: aqua;
+}
+
+.temas-container ul a.tema:hover {
+  color: #fff;
+}
+
+.temas-container ul li{
+  line-height: 2.2;
+  color: #fff;
+}
+
+.temas-container ul li a:hover{
+  color: aqua;
+}
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<--FOOTER-->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.footer {
+  background: #2f3640;
+  color: #999999;
+  padding: 5px 0;
+  text-align: center;
+}
+
+/*#######################################--Media para móvil--#############################*/
+@media (max-width: 767px) {
+  body {
+    top: 0;
+  }
+
+  .container {
+    top: 0;
+    left: 0;
+    width: 98%;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<--NAVIGATION-->>>>>>>>>>>>>>>>>>>>>>>>*/
+  .container-nav-main {
+    display: block;
+    position: absolute;
+    width: 30%;
+    background: #2f3640;
+    top: 0;
+    left: 0;
+  }
+
+  .nav-main .nav-brand {
+    display: inline-block;
+    position: relative;
+    left: 60px;
+  }
+
+  /*Estilo para elemento con clase nav-brand y tambien con clase hide( dicha clase hide será asignada desde JS) que se encuentra dentro del elemento con clase nav-main*/
+  .nav-main .nav-brand.hide {
+    display: none;
+  }
+
+  .nav-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    font-weight: bold;
+    opacity: 0.9;
+    width: 130px;
+  }
+
+  /*estilo para elemento con clase nav-main y tambien con clase hide, dicha clase hide la asignaremos desde JS (dentro de seccion NAVIGATION)*/
+  .nav-main.hide {
+    background: none;
+    border: none;
+  }
+
+  .nav-main ul.nav-menu {
+    position: absolute;
+    display: block;
+    background: #2f3640;
+    width: 220%;
+    height: auto;
+    top: -20px;
+    left: -2px;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    transform: translate(-350px);
+    transition: transform 0.5s ease-in-out;
+    border-radius: 8px;
+  }
+
+  /*este estilo se aplicará cuando con ayuda de JavaScript agreguemos la clase show al elemento <ul> que se encuentra dentro del elemento con clase nav-main (para que se muestre el menu de navegación)*/
+  .nav-main ul.nav-menu.show {
+    transform: translate(-20px);
+  }
+
+  ul.nav-menu li {
+    position: relative;
+    top: 10px;
+    left: 26px;
+    margin-bottom: 10px;
+  }
+
+  .nav-main ul.nav-menu li.more {
+    margin-left: 0;
+  }
+
+  ul.nav-menu li img.nav-brand-mobile {
+    width: 25%;
+    height: 50px;
+    top: 10px;
+    position: relative;
+    left: -0.8px;
+  }
+
+  /*estilo para que se muestre el elemento (logo) con clase nav-bran-movile gracias al display: inline-block (ya que estaba oculto en pantallas que no son de dispositivo móvil*/
+  .nav-brand-mobile {
+    position: relative;
+    display: inline-block;
+    left: -10px;
+  }
+
+  .nav-main .icon-search {
+    position: relative;
+    display: none;
+    margin-left: 35px;
+  }
+
+  /*estilo para elemento con clase icon-search y que tambien tiene la clase show, misma clase show que asignaremos desde JS (icono de busqueda dentro de sección NAV)*/
+  .nav-main .icon-search.show {
+    display: inline-block;
+    width: 38%;
+    height: auto;
+    top: -0.5px;
+    left: 40px;
+    border: 1px solid #888888;
+    border-radius: 180px;
+    font-size: 37px;
+    text-align: center;
+    background: #777777;
+  }
+
+  .icon-search.show a {
+    position: relative;
+    top: -6px;
+    font-size: 20.5px;
+  }
+
+  /*estilo para elemento con clase boton-menu (para el icono que muestra el menú de navegación)*/
+  .boton-menu {
+    display: inline-block;
+    width: 38%;
+    height: auto;
+    top: 6px;
+    left: 8px;
+    font-size: 37px;
+    border: 1px solid #888888;
+    border-radius: 180px;
+    text-align: center;
+    background: #777777;
+  }
+
+  .boton-menu i {
+    position: relative;
+    top: -1.5px;
+    font-size: 30px;
+  }
+
+  .boton-menu:hover {
+    color: red;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<--FRONTEND ELEMENTS-->>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  .frontend-elements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<<<--SECTION FRONTEND/SECTION BACKEND-->>>>>>>>>>>>>>>>>>>*/
+  .section-frontend .content,
+  .section-backend .content,
+  .block-fullstack .content {
+    width: 80%;
+    padding: 20px 20px;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<--BACKEND ELEMENTS-->>>>>>>>>>>>>>>>>>>>>>>>*/
+
+  .backend-elements {
+    grid-template-columns: 1fr;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<--SOCIAL-->>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  .social {
+    margin: 35px;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<--TEMAS LINKS-->>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  .temas-links .temas-container {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 15px;
+  }
+}
+
+/*#######################################--Media query para dispositivos móviles con ancho máximo en pantalla de 500px--###################################################*/
+@media (max-width: 500px) {
+  .container {
+    width: 99%;
+  }
+
+  img {
+    height: 250px;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<--FRONTEND ELEMENTS-->>>>>>>>>>>>>>>>>>>>>>>*/
+  .frontend-elements {
+    grid-template-columns: 1fr;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<<--SOCIAL-->>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+  .social {
+    margin: 35px;
+  }
+
+  .links a {
+    margin: 0 15px;
+  }
+
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<--FOOTER LINKS-->>>>>>>>>>>>>>>>>>>>>>>>*/
+  .temas-links .temas-container {
+    grid-template-columns: 1fr;
+    font-size: 15px;
+  }
+}
